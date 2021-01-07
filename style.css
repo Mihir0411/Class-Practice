@@ -1,0 +1,32 @@
+h1:hover{
+    color: red;
+    font-size: 50px;
+    text-align: center;
+}
+li:nth-child(3n+3){  /* nth-child(3n+3 akhane 1n+,2n+,3N+ sob vabe e kora jabe)*/
+   background-color: red;
+}
+h1::before{
+    content: "alam say ";
+    font-size: 30px;
+    color: goldenrod;
+}
+h1::after{
+    content: " Bonas";
+    font-size: 30px;
+    color: rgb(168, 218, 32);
+}
+.focus:focus{
+    color: green;
+    font-size: 50px;
+}
+body {
+  counter-reset: section;                       /* Set a counter named 'section', and its initial value is 0. */
+}
+
+p::before {
+  counter-increment: section;                   /* Increment the value of section counter by 1 */
+  content: "Section " counter(section) ": ";    /* Display the word 'Section ', the value of
+                                                   section counter, and a colon before the content
+                                                   of each h3 */
+}
